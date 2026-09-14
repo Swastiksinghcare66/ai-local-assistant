@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -141,7 +141,7 @@ removed_web_feature/
 
 # Duplicate root CosyVoice server
 # Canonical copy is wsl_cosyvoice/services/
-cosyvoice_server_prod.py
+/cosyvoice_server_prod.py
 
 # Development patch artifact
 sara_human_behavior_inplace.patch
