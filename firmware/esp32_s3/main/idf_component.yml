@@ -1,0 +1,4 @@
+﻿dependencies:
+  idf: ">=5.5,<6.0"
+  espressif/esp-sr: "2.5.3"
+  espressif/esp_tinyusb: "2.2.0"

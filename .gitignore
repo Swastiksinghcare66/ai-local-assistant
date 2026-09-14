@@ -1,0 +1,151 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+.venv_*/
+venv/
+env/
+
+# Model weights / generated AI files
+*.gguf
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.plan
+*.engine
+
+models/*
+!models/.gitkeep
+pretrained_models/
+
+# Hugging Face / ML caches
+.cache/
+huggingface/
+hub/
+torch_extensions/
+
+# Logs / runtime data
+logs/
+log/
+history/
+benchmarks/
+*.log
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temp / backup
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Old development snapshots
+_pre_web_removal_*/
+_production_agent_fix_*/
+_router_fix_*/
+
+# WSL generated runtime
+wsl_cosyvoice/.venv*/
+wsl_cosyvoice/pretrained_models/
+
+# ============================================================
+# LARGE DATASETS / MODEL BLOBS
+# ============================================================
+*.zim
+*.bin
+
+rag_lab/data/*.zim
+rag_lab/data/**/*.zim
+
+models/
+pretrained_models/
+
+# Additional ML model/cache formats
+*.ckpt
+*.tflite
+*.pb
+*.h5
+*.hdf5
+*.npz
+
+# TensorRT / generated accelerators
+*.plan
+*.engine
+
+
+# ESP-IDF generated/downloaded dependencies
+firmware/esp32_s3/managed_components/
+firmware/esp32_s3/build/
+firmware/esp32_s3/sdkconfig.old
+
+# ============================================================
+# OLD SNAPSHOTS / INTERMEDIATE PATCHES
+# ============================================================
+SIA_Final_Hinglish_Active_V3/
+SIA_Hinglish_Piper_V1/
+SIA_Hinglish_Primary_Final/
+SIA_Hinglish_Primary_Fix_V1/
+SIA_Hinglish_Realism_V2/
+SIA_Voice_DSP_WarmClear_V1/
+Sara_Agent_Layer_v1/
+
+_pc_broker_fix_*/
+_sia_pc_bridge_install/
+
+# Historical source backups
+*_before_*.py
+*_old.py
+*.bak_*
+*.backup_*
+*_backup.py
+
+# Historical firmware backups
+*.backup_*
+firmware/esp32_s3/*.backup_*
+firmware/esp32_s3/main/*.backup_*
+
+# Scratch patches / temporary fix files
+voice_pipeline_bargefix.py
+voice_pipeline_no_interrupt.py
+sia_audio_source_bargefix.py
+sia_audio_source_noise_guard.py
+
+# Benchmark outputs
+benchmark/results/
+
+
+# ============================================================
+# DUPLICATE / NON-CANONICAL PROJECT COPIES
+# ============================================================
+
+# Canonical firmware is firmware/esp32_s3/
+SIA_ESP32S3_Production_Firmware_V2_0/
+
+# Old removed feature
+removed_web_feature/
+
+# Duplicate root CosyVoice server
+# Canonical copy is wsl_cosyvoice/services/
+cosyvoice_server_prod.py
+
+# Development patch artifact
+sara_human_behavior_inplace.patch
+
+# External/reference architecture material not part of SARA runtime
+Documentation/chatgpt5architecrure-main/
+

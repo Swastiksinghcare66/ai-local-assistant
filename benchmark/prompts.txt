@@ -1,0 +1,10 @@
+    What is a transistor?
+What is a MOSFET?
+What is machine learning?
+What is a neural network?
+What is an operating system?
+Explain the difference between RAM and ROM.
+What is the purpose of an operating system?
+Explain supervised learning.
+What is a transformer model?
+What is retrieval augmented generation?

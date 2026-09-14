@@ -1,0 +1,40 @@
+# ============================================================
+# SIA ESP32-S3 N16R8 production-development defaults
+# Pin the toolchain in main/idf_component.yml.
+# ============================================================
+
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# 16 MB flash
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# 8 MB Octal PSRAM (ESP32-S3 N16R8 module)
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+
+# FreeRTOS / watchdog
+CONFIG_FREERTOS_HZ=1000
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=5
+
+# TinyUSB CDC
+CONFIG_TINYUSB_CDC_ENABLED=y
+CONFIG_TINYUSB_CDC_COUNT=1
+CONFIG_TINYUSB_CDC_EP_BUFSIZE=8192
+CONFIG_TINYUSB_DESC_PRODUCT_STRING="SIA Voice Hardware"
+CONFIG_TINYUSB_DESC_CDC_STRING="SIA Audio Link"
+
+# ESP-SR models:
+# Start with mature WebRTC NS + VAD for deterministic baseline.
+# Neural NS/VAD can be enabled after controlled WER/ERLE benchmarking.
+CONFIG_SR_NSN_WEBRTC=y
+CONFIG_SR_VADN_WEBRTC=y
+
+# Store crash dumps in flash partition for field diagnostics.
+CONFIG_ESP_COREDUMP_ENABLE_TO_FLASH=y
+CONFIG_TINYUSB_CDC_RX_BUFSIZE=8192
+CONFIG_TINYUSB_CDC_TX_BUFSIZE=8192
